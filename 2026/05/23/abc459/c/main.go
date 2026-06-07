@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func isPiledAllField(grid []int, n int) bool { 
+func isPiledAllField(grid []int, n int) bool {
 	for i := range n {
 		if grid[i] == 0 {
 			return false
@@ -22,21 +22,20 @@ func isPiledAllField(grid []int, n int) bool {
 func processX(grid []int, x int, n int) {
 	grid[x-1] += 1
 
-	if isPiledAllField(grid, n){
+	if isPiledAllField(grid, n) {
 		for i := range n {
-			grid[i]-= 1
-		}	
+			grid[i] -= 1
+		}
 	}
 }
-
 
 func processY(grid []int, y int, n int) {
 	count := 0
 	for i := range n {
 		if grid[i] >= y {
 			count++
-		}	
-	} 
+		}
+	}
 	fmt.Println(count)
 }
 
@@ -45,7 +44,7 @@ func main() {
 	fmt.Scan(&n, &q)
 	sc := bufio.NewScanner(os.Stdin)
 	grid := make([]int, n)
-	for range q{
+	for range q {
 		sc.Scan()
 		inputs := strings.Split(sc.Text(), " ")
 		first, _ := strconv.Atoi(inputs[0])
@@ -56,7 +55,5 @@ func main() {
 			processY(grid, seconde, n)
 		}
 	}
-
-
 
 }

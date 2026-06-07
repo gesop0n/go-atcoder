@@ -1,8 +1,7 @@
 // https://atcoder.jp/contests/abc418/tasks/abc418_a
 package main
 
-import  "fmt"
-
+import "fmt"
 
 func isTea(s string) bool {
 	return s == "tea"
@@ -23,7 +22,7 @@ func main() {
 	fmt.Scan(&s)
 
 	if n-3 < 0 {
-	processTea(s)	
+		processTea(s)
 	} else {
 		processTea(s[n-3:])
 	}

@@ -6,7 +6,7 @@ import "fmt"
 func main() {
 	var n int
 	fmt.Scan(&n)
-	
+
 	as := make([]int, n)
 	bs := make([]int, n)
 	for i := range n {
@@ -16,12 +16,11 @@ func main() {
 		fmt.Scan(&bs[i])
 	}
 
-
 	ans := "Yes"
 	for i := range n {
 		if bs[as[i]-1] != i+1 {
 			ans = "No"
-		} 
+		}
 	}
 
 	fmt.Println(ans)

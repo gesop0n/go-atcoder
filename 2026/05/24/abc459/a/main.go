@@ -7,6 +7,6 @@ func main() {
 	var x int
 	fmt.Scan(&x)
 
-	word := "HelloWorld" 
+	word := "HelloWorld"
 	fmt.Println(word[:x-1] + word[x:])
 }

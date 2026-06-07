@@ -31,7 +31,7 @@ func solve(s string) {
 	// 構築
 	result := make([]byte, 0, n)
 	last := -1 // 直前に使った文字のインデックス
-	
+
 	for range n {
 		// last 以外でd[c]が最大のcを選ぶ
 		best := -1
@@ -39,11 +39,11 @@ func solve(s string) {
 			if c == last {
 				continue
 			}
-			if d[c]== 0 {
+			if d[c] == 0 {
 				continue
 			}
-			if best== -1 || d[c] > d[best] {
-				best =c 
+			if best == -1 || d[c] > d[best] {
+				best = c
 			}
 		}
 		result = append(result, byte('a'+best))
@@ -63,8 +63,8 @@ func main() {
 	var t int
 	fmt.Fscan(reader, &t)
 
-	for t > 0{
-		var s string 
+	for t > 0 {
+		var s string
 		fmt.Fscan(reader, &s)
 		solve(s)
 		t--

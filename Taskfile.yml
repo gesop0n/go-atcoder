@@ -9,6 +9,12 @@ tasks:
       - oj test -c ./a.out -d tests -e 1e-6
       - rm -f a.out
 
+  fmt:
+    desc: "Format all Go files in the repo (gofmt)"
+    dir: "{{.TASKFILE_DIR}}"
+    cmds:
+      - go fmt ./...
+
   new:
     desc: "Create problem directory and fetch tests (task new CONTEST=abc380 [PROBLEM=a])"
     vars:

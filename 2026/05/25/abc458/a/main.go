@@ -9,5 +9,5 @@ func main() {
 	fmt.Scan(&s)
 	fmt.Scan(&n)
 
-	fmt.Println(s[n:len(s)-n])
+	fmt.Println(s[n : len(s)-n])
 }
