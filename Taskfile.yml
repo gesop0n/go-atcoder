@@ -56,7 +56,7 @@ tasks:
   today:
     desc: "Create today's directory"
     vars:
-      TODAY_DIR: '{{.TASKFILE_DIR}}/{{now | date "2006/01/02"}}'
+      TODAY_DIR: '{{.TASKFILE_DIR}}/archive/{{now | date "2006/01/02"}}'
     cmds:
       - mkdir -p "{{.TODAY_DIR}}"
       # TODAY_DIR がコピーされるので、そのまま cd (cmd+v)で移動
